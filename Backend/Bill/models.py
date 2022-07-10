@@ -16,4 +16,4 @@ class Bill(models.Model):
     UserId=models.ForeignKey(User,on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.UserId.get_username()
+        return self.UserId.get_username()+" : "+self.BillGenDate.strftime("%Y-%m-%d")

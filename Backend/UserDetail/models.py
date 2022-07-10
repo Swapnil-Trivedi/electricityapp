@@ -14,4 +14,4 @@ class UserDetail(models.Model):
     UserId=models.ForeignKey(User,on_delete=models.CASCADE,primary_key=True,unique=True)
 
     def __str__(self):
-        return self.Mobile
+        return self.UserId.get_username()
