@@ -37,10 +37,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #installed apps
+    "rest_framework",
     #my apps
     'Bill.apps.BillConfig',
     'UserDetail.apps.UserdetailConfig',
 ]
+
+REST_FRAMEWORK={
+		    'DEFAULT_PERMISSION_CLASSES':[
+		        'rest_framework.permissions.AllowAny',
+		    ]
+		}
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
