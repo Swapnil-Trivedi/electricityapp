@@ -16,5 +16,4 @@ Base Url: localhost:8000/api/v1/
 
 
     Method  |   Endpoint    |     Desc                         |
-------------|---------------|----------------------------------|
     GET     |   bill        | To get the list of all the bills |
