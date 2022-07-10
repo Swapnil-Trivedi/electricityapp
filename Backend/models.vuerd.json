@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": -1.5384615948919735,
+    "scrollTop": -261.5384711316357,
+    "scrollLeft": -50.76923263143518,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -168,7 +168,7 @@
           "active": false,
           "left": 16.9233,
           "top": 46.1546,
-          "zIndex": 106,
+          "zIndex": 2,
           "widthName": 60,
           "widthComment": 120
         },
@@ -180,7 +180,7 @@
         "comment": "To store Users Details",
         "columns": [
           {
-            "name": "MobilePrimary",
+            "name": "Mobile",
             "comment": "",
             "dataType": "INTEGER",
             "default": "",
@@ -195,35 +195,12 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 85.07177734375,
+              "widthName": 60,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
             },
             "id": "9d2d3489-2827-4ad2-96b0-9612b5c10940"
-          },
-          {
-            "name": "MobileSEcondary",
-            "comment": "",
-            "dataType": "INTEGER",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 103.88623046875,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "9d6207ee-af62-45ba-b83d-2c3ca5722e8c"
           },
           {
             "name": "Address",
@@ -365,10 +342,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 560.7699,
           "top": 17.6924,
-          "zIndex": 107,
+          "zIndex": 9,
           "widthName": 62.68359375,
           "widthComment": 120
         },
@@ -545,7 +522,7 @@
           "active": false,
           "left": 137.6923,
           "top": 318.4611,
-          "zIndex": 85,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 120
         },
@@ -579,7 +556,7 @@
             "f3c24d3e-0fd3-4330-a7bc-a1b1f8d7b5d0"
           ],
           "x": 560.7699,
-          "y": 134.1924,
+          "y": 123.94239999999999,
           "direction": "left"
         },
         "constraintName": "fk_user_to_userdetail",
