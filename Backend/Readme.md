@@ -15,7 +15,9 @@ This is the requiremnts/todo for the backend
 Base Url: localhost:8000/api/v1/
 
 
-    Method  |   Endpoint    |     Desc                         |
-    ------------------------------------------------------------
-    GET     |   bill        | To get the list of all the bills |
-    GET     |   userdetail  | To get the userdetail for a user |
+    Method  |   Endpoint        |     Desc                         |
+    ----------------------------------------------------------------
+    GET     |   bill            | To get the list of all the bills |
+    GET     |   bill/<int:pk>   | Tp get the details of a bill
+    GET     |   userdetail      | To get the userdetail for a user |
+

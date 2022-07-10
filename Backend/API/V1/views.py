@@ -1,4 +1,5 @@
 from rest_framework import generics,permissions
+from rest_framework.exceptions import NotFound
 from Bill.models import Bill
 from UserDetail.models import UserDetail as UserDetailModel
 from .serializers import BillSerializer,UserDetailSerializer
@@ -11,6 +12,19 @@ class BillList(generics.ListAPIView):
     def get_queryset(self):
         userId=self.request.user
         return Bill.objects.filter(UserId_id=userId)
+
+class BillDetail(generics.RetrieveAPIView):
+    permission_classes=(permissions.IsAuthenticated,)
+    serializer_class=BillSerializer
+
+    def get_object(self):
+        try:
+            pk=self.kwargs['pk']
+            userId=self.request.user
+            return Bill.objects.get(id=pk,UserId_id=userId)
+        except Exception as e:
+            raise NotFound
+
 
 class UserDetail(generics.RetrieveAPIView):
     permission_classes=(permissions.IsAuthenticated,)
