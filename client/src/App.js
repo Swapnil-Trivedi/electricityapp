@@ -1,8 +1,19 @@
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <h1>Hello</h1>
+    <>
+      <div class="container">
+        <Navbar/>
+        <div className="row my-5">
+          <div className="col">
+            <Sidebar/>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
