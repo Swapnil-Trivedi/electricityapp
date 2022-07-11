@@ -3,54 +3,17 @@ import React from "react";
 function Sidebar() {
   return (
     <>
-      <div
-        className="offcanvas offcanvas-start"
-        tabindex="-1"
-        id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel"
-      >
+      <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{marginTop:"58px",maxWidth: "250px"}}>
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasExampleLabel">
-            Offcanvas
+            Menu
           </h5>
-          <button
-            type="button"
-            className="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
+          <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body">
           <div>
-            Some text as placeholder. In real life you can have the elements you
-            have chosen. Like, text, images, lists, etc.
-          </div>
-          <div className="dropdown mt-3">
-            <button
-              className="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-            >
-              Dropdown button
-            </button>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li>
-                <a className="dropdown-item" href="/#">
-                  Action
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="/#">
-                  Another action
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="/#">
-                  Something else here
-                </a>
-              </li>
-            </ul>
+                <ul className="sidebar-item"><i className="fa fa-chalkboard mx-3 my-2"></i>  Dashboard </ul>
+                <ul className="sidebar-item"><i className="fa-solid fa-user-check mx-3 my-2"></i>  My Details</ul>
           </div>
         </div>
       </div>

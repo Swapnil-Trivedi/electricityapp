@@ -39,3 +39,12 @@
 i{
   cursor: pointer;
 }
+
+.offcanvas{
+  background-color: #212529;
+  color:white;
+}
+
+.sidebar-item:hover{
+  background-color:#535353;
+}

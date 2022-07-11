@@ -5,7 +5,7 @@ import Sidebar from "./components/Sidebar";
 function App() {
   return (
     <>
-      <div class="container">
+      <div className="container">
         <Navbar/>
         <div className="row my-5">
           <div className="col">
