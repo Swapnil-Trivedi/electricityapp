@@ -37,10 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #custom middelware for jwt
-    
     #installed apps
     "rest_framework",
+    'rest_framework_swagger',
     #my apps
     'Bill.apps.BillConfig',
     'UserDetail.apps.UserdetailConfig',
@@ -54,6 +53,7 @@ REST_FRAMEWORK={
                 'rest_framework_simplejwt.authentication.JWTAuthentication',
                 'rest_framework.authentication.SessionAuthentication',
             ],
+            'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 		}
 
 
@@ -83,9 +83,16 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries': {
+                'staticfiles': 'django.templatetags.static',
+            },
         },
+        
     },
 ]
+
+LOGIN_URL = 'rest_framework:login'
+LOGOUT_URL = 'rest_framework:logout'
 
 WSGI_APPLICATION = 'ElectricityApp.wsgi.application'
 
@@ -141,3 +148,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SWAGGER_SETTINGS = {
+'LOGIN_URL': 'rest_framework:login',
+'LOGOUT_URL': 'rest_framework:logout',
+}

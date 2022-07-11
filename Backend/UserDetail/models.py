@@ -11,7 +11,7 @@ class UserDetail(models.Model):
     State=models.CharField(max_length=20,null=False)
     Pincode=models.CharField(max_length=7,null=False)
     Country=models.CharField(max_length=50,default="India")
-    UserId=models.ForeignKey(User,on_delete=models.CASCADE,primary_key=True,unique=True)
+    UserId=models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True,unique=True)
 
     def __str__(self):
         return self.UserId.get_username()

@@ -9,6 +9,7 @@ djangorestframework = "*"
 django-rest-auth = "*"
 django-allauth = "*"
 djangorestframework-simplejwt = "*"
+django-rest-swagger = "*"
 
 [dev-packages]
 
