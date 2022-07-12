@@ -40,10 +40,14 @@ INSTALLED_APPS = [
     #installed apps
     "rest_framework",
     'rest_framework_swagger',
+    'corsheaders',
     #my apps
     'Bill.apps.BillConfig',
     'UserDetail.apps.UserdetailConfig',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+ALLOWED_HOSTS = ['*']
 
 REST_FRAMEWORK={
 		    'DEFAULT_PERMISSION_CLASSES':[
@@ -62,6 +66,7 @@ REST_FRAMEWORK={
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -70,6 +75,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'ElectricityApp.urls'
+
 
 TEMPLATES = [
     {
