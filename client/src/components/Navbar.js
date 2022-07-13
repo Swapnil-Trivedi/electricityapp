@@ -20,7 +20,7 @@ function Navbar() {
                 width="40"
                 height="30"
               />
-              <h5>Plugged In</h5>
+              <h4>E-Bill</h4>
             </a>
           </div>
         </nav>
