@@ -1,7 +1,6 @@
 import React, {useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import appIcon from '../assets/appicon.png';
-
 function Signin() {
 
   const [username,setUser]=useState(null);
@@ -34,12 +33,14 @@ function Signin() {
                     history("/Dashboard");
             }
             else{
-                alert("some error")
+                   alert(data.status+" Please try again")  
+         
             }
   }
 
 
   return (
+    <>
     <div className='container text-center' style={{marginTop:"150px",width:"300px"}}>
         <form className="form-signin" onSubmit={handleSubmit}>
       <img className="mb-4" src={appIcon} alt="" width="72" height="72"/>
@@ -52,6 +53,7 @@ function Signin() {
       <p className="mt-5 mb-3 text-muted">&copy; Made with Luv Swapnil@2022</p>
     </form>
     </div>
+    </>
   )
 }
 
