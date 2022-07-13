@@ -1,7 +1,7 @@
 from dataclasses import fields
 from pyexpat import model
 from rest_framework import serializers
-
+from django.contrib.auth.models import User
 ##importing the models
 from Bill.models import Bill
 from UserDetail.models import UserDetail
@@ -11,7 +11,21 @@ class BillSerializer(serializers.ModelSerializer):
         fields=('id','Amount','BillGenDate','BillDueDate','Unit','Paid')
         model=Bill
 
-class UserDetailSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        fields=("Mobile","Address","City","State","Pincode","Country",)
+        model=User
+        fields=("first_name","last_name")
+
+class UserDetailSerializer(serializers.ModelSerializer):
+    #custom serilaization to get user detials
+    user=serializers.SerializerMethodField()
+    class Meta:
+        fields=("Mobile","Address","City","State","Pincode","Country","user")
         model=UserDetail
+    def get_user(self, obj):
+            user_query = User.objects.filter(
+                id=obj.UserId_id)
+            serializer = UserSerializer(user_query, many=True)
+    
+            return serializer.data
+       

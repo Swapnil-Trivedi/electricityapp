@@ -8,7 +8,7 @@ function Detailcard(props) {
 <div className="card mb-3 my-3 mx-3" style={{maxWidth:"700px", margin:"100px"}}>
   <div className="row no-gutters">
     <div className="col-md-4">
-      <img src={dummyUser} className="card-img" alt={dummyUser}/>
+      <img src={dummyUser} className="card-img mx-2 my-2" alt={dummyUser}/>
     </div>
     <div className="col-md-8">
       <div className="card-body">

@@ -34,4 +34,5 @@ class UserDetail(generics.RetrieveAPIView):
     def get_object(self):
         userId=self.request.user
         return UserDetailModel.objects.get(UserId_id=userId)
+
     
