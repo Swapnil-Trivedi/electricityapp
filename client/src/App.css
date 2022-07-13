@@ -47,4 +47,11 @@ i{
 
 .sidebar-item:hover{
   background-color:#535353;
+  cursor: pointer;
+  border-radius: 15px;
 }
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+  }

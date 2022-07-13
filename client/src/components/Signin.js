@@ -1,11 +1,12 @@
 import React, {useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import appIcon from '../assets/appicon.png';
 
 function Signin() {
 
   const [username,setUser]=useState(null);
   const [password,setPass]=useState(null);  
-
+  let history=useNavigate();  
   const handleSubmit=(event)=>{
     event.preventDefault();
     setUser(event.target.user.value);
@@ -30,6 +31,7 @@ function Signin() {
                     localStorage.setItem('refresh',parsedData['refresh']);
                     localStorage.setItem('tokken',parsedData['access']);
                     console.log("token set succesfully");
+                    history("/Dashboard");
             }
             else{
                 alert("some error")

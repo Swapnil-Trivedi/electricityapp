@@ -1,9 +1,8 @@
 import "./App.css";
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
-import Briefbar from "./components/Briefbar";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import Dashboard from "./components/Dashboard/Dashboard";
 import Signin from "./components/Signin";
+import Mydetails from "./components/MyDetails/Mydetails";
 
 function App() {
   return (
@@ -13,7 +12,8 @@ function App() {
       <Routes>
 
         <Route exact path="/" element={<Signin/>}/>
-        <Route exact path="/home" element={<Briefbar />}/>
+        <Route exact path="/Dashboard" element={<Dashboard/>}/>
+        <Route exact path="/MyDetails" element={<Mydetails/>}/>
 
       </Routes>
     </div>
