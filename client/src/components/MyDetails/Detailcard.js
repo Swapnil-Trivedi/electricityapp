@@ -3,7 +3,7 @@ import dummyUser from "../../assets/dummyUser.png";
 
 function Detailcard(props) {
     const {data}=props
-    console.log(data)
+    console.log(data.user[0].first_name)
   return (
 <div className="card mb-3 my-3 mx-3" style={{maxWidth:"700px", margin:"100px"}}>
   <div className="row no-gutters">
@@ -16,11 +16,14 @@ function Detailcard(props) {
         <hr />
         <div className="container">
             <div className="row mx-2 my-2">
+            <p className="card-text"><i className="fa-solid fa-id-badge my-2 mx-2"></i>  {data.user[0].first_name +" "+ data.user[0].last_name}</p>
+            </div>
+            <div className="row mx-2 my-2">
             <i className="fa-solid fa-map-location-dot mx-2 my-2"></i>
             <p className="card-text">&ensp; {data.Address} <br />&ensp; {data.City} {data.Pincode}<br />&ensp; {data.State}</p>
             </div>
             <div className="row mx-2 my-2">
-            <p className="card-text"><i className="fa-solid fa-phone mx-2"></i>  +91-{data.Mobile}</p>
+            <p className="card-text"><i className="fa-solid fa-phone mx-2 my-2 "></i>  +91-{data.Mobile}</p>
             </div>
         </div>
       </div>
