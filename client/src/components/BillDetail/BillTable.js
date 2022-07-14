@@ -1,5 +1,5 @@
 import React from "react";
-import TableItem from "./TableItem";
+import Table from "./Table";
 
 function BillTable(props) {
     let data=[]
@@ -14,24 +14,7 @@ function BillTable(props) {
             <h2>All your Electricaity Bills are listed down below</h2>
             <hr />
           </div>
-          <div className="col-12 mx-2 my-3">
-            <table className="table table-hover table-striped">
-              <thead>
-                <tr className="table-dark">
-                  <th scope="col">Bill Id</th>
-                  <th scope="col">Generation Date</th>
-                  <th scope="col">Amount</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">Actions</th>
-                </tr>
-              </thead>
-          {
-            data.map((ele)=>{
-                return <TableItem key={ele.id} data={ele} />
-            })
-          }
-          </table>
-          </div>
+          <Table data={data}/>
         </div>
       </div>
     </>
