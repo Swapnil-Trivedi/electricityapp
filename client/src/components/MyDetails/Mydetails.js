@@ -30,6 +30,7 @@ function Mydetails() {
   },[data])
   return (
     <>
+    {document.title=`E-Bill My Details`}
     <div className="container">
       <div className="row">
           <div className="col-12"><Navbar /><Sidebar /></div>

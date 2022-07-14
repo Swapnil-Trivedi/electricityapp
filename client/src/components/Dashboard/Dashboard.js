@@ -6,6 +6,7 @@ import Briefbar from './Briefbar';
 function Dashboard() {
   return (
     <>
+    {document.title=`E-Bill Dashboard`}
     <Navbar/>
     <Sidebar/>  
     <Briefbar/>  

@@ -13,6 +13,7 @@ function Signin() {
   }
 
   useEffect(()=>{
+    document.title="E-Bill"
     if(username!==null && password!==null)
         getToken();
   })

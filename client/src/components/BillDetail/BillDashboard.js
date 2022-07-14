@@ -32,6 +32,7 @@ function BillDashboard() {
 
   return (
     <>
+    {document.title=`My Bills`}
     <Navbar/>
     <Sidebar/>
     <div className="container mx-3 my-3">
