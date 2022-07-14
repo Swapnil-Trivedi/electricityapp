@@ -18,7 +18,7 @@ function BillTable(props) {
             <table className="table table-hover table-striped">
               <thead>
                 <tr className="table-dark">
-                  <th scope="col">Bill Number</th>
+                  <th scope="col">Bill Id</th>
                   <th scope="col">Generation Date</th>
                   <th scope="col">Amount</th>
                   <th scope="col">Status</th>
