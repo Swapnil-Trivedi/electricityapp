@@ -35,7 +35,6 @@ function Table(props) {
                 <i className="fa-solid fa-eye mx-2" data-toggle="tooltip" data-placement="top" title="View" data-bs-toggle="modal" data-bs-target="#myModal" onClick={()=>{handleView(ele)}}></i>
                 {!ele.Paid?<i className="fa-solid fa-file-invoice-dollar mx-2" data-toggle="tooltip" data-placement="top" title="Payment"></i>:""}
                 <i className="fa-solid fa-download mx-2" data-toggle="tooltip" data-placement="top" title="Download Bill"></i>
-                <i className="fa-solid fa-plug-circle-exclamation mx-2" data-toggle="tooltip" data-placement="top" title="Report Bill"></i>
                 </td>
               </tr>
             })
