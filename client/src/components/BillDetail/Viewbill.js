@@ -11,13 +11,13 @@ function Viewbill(props) {
   <div className="modal-dialog modal-dialog-centered" role="document">
     <div className="modal-content">
       <div className="modal-header">
-        <h4 className="modal-title" id="exampleModalLongTitle"><img className="mx-3" src={appIcon} alt="LOL" style={{width:"40px",height:"30px"}} />  E-Bill Systems Pvt Ltd </h4>
+        <h4 className="modal-title" id="exampleModalLongTitle"><img className="mx-3" src={appIcon} alt="LOL" style={{width:"58px",height:"48px"}} />  E-Bill Systems Pvt Ltd </h4>
       </div>
       <div className="modal-body">
         <p><i class="fa-solid fa-id-badge mx-3"></i> <b> Bill Id : </b> CXAAS-{data.id} &nbsp; &nbsp; &nbsp;<i class="fa-solid fa-sack-dollar mx-3"></i> <b> Amount : &#8377; </b> {data.Amount}</p>
-        {data.Paid?<p><i class="fa-solid fa-circle-check mx-3"></i> Payment completed</p>:<p><i class="fa-solid fa-triangle-exclamation mx-3"></i> Pending payment</p> }
+        <b>{data.Paid?<p><i class="fa-solid fa-circle-check mx-3"></i> Payment completed</p>:<p><i class="fa-solid fa-triangle-exclamation mx-3"></i> Pending payment</p> }</b>
         <p><i class="fa-solid fa-calendar-days mx-3"></i> <b>From : </b>{data.BillGenDate} &nbsp; &nbsp; <b> To : </b>{data.BillDueDate}</p>
-        <p><i class="fa-solid fa-bolt-lightning mx-3"></i> Total power units consumed : {data.Unit}</p>
+        <p><i class="fa-solid fa-bolt-lightning mx-3"></i> <b>Total power units consumed :</b> {data.Unit}</p>
       </div>
       <div className="modal-footer">
         <button type="button" className="btn btn-danger" data-bs-dismiss="modal">Close</button>
