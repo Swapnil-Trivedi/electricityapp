@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
     #my apps
     'Bill.apps.BillConfig',
+    'Report.apps.ReportConfig',
     'UserDetail.apps.UserdetailConfig',
 ]
 
