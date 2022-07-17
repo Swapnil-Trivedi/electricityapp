@@ -34,7 +34,7 @@ class ReportSerializer(serializers.ModelSerializer):
     User=serializers.SerializerMethodField()
     Bill=serializers.SerializerMethodField()
     class Meta:
-        fields=("ReportId","Remarks","Bill","User")
+        fields=("ReportId","Remarks","Status","Bill","User")
         model=BillReport
     def get_User(self,obj):
         user_query=User.objects.filter(id=obj.UserId_id)
