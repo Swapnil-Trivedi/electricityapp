@@ -23,8 +23,10 @@ function Sidebar() {
           <div>
           <Link to="/Dashboard"><ul className="sidebar-item" data-bs-dismiss="offcanvas"><i className="fa fa-chalkboard mx-3 my-2"></i>  Dashboard </ul></Link>
           <Link to="/BillDashboard"><ul className="sidebar-item" data-bs-dismiss="offcanvas"><i className="fa-solid fa-file-lines mx-3 my-2"></i>  My Bills </ul></Link>
+          <Link to="/MyReports"><ul className="sidebar-item" data-bs-dismiss="offcanvas"><i className="fa-solid fa-receipt mx-3 my-2"></i>My Reports</ul></Link>
           <Link to="/MyDetails"><ul className="sidebar-item" data-bs-dismiss="offcanvas"><i className="fa-solid fa-user-check mx-3 my-2"></i>  My Details </ul></Link>
-                <ul className="sidebar-item" data-bs-dismiss="offcanvas" onClick={handleSignout}><i className="fa-solid fa-power-off mx-3 my-2"></i>  Sign Out</ul>
+          <hr />
+          <ul className="sidebar-item" data-bs-dismiss="offcanvas" onClick={handleSignout}><i className="fa-solid fa-power-off mx-3 my-2"></i>  Sign Out</ul>
           </div>
         </div>
       </div>

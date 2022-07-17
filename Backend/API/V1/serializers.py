@@ -31,9 +31,20 @@ class UserDetailSerializer(serializers.ModelSerializer):
             return serializer.data
 
 class ReportSerializer(serializers.ModelSerializer):
+    User=serializers.SerializerMethodField()
+    Bill=serializers.SerializerMethodField()
     class Meta:
-        fields=("ReportId","Remarks")
+        fields=("ReportId","Remarks","Bill","User")
         model=BillReport
+    def get_User(self,obj):
+        user_query=User.objects.filter(id=obj.UserId_id)
+        serializer=UserSerializer(user_query,many=True)
+        return serializer.data
+
+    def get_Bill(self,obj):
+        bill_query=Bill.objects.filter(id=obj.BillId_id)
+        serializer=BillSerializer(bill_query,many=True)
+        return serializer.data
 
 class SubmitReportSerializer(serializers.ModelSerializer):
     class Meta:

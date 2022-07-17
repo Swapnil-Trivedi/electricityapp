@@ -16,7 +16,7 @@ function Reportmodal(props) {
             };
             let data=await fetch(url,payload);
             if(data.status===201 || data.staus==="ok"){
-                alert("Repoort submitted successfully")
+                alert("Report submitted successfully")
             }
             else{
                    alert(data.status+" Please try again")  
