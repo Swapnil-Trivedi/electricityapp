@@ -38,7 +38,8 @@ function ReportDashboard() {
     <Navbar/>
     <Sidebar/>
     <div className="container mx-3 my-3">
-    <ReportTable data={reportData.length===0?[]:reportData}/>
+    {reportData.length===0? <h2>No Active Reports for You</h2> : <ReportTable data={reportData}/>}
+    
     </div>
     </>
   )

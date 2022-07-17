@@ -53,3 +53,8 @@ class SubmitReport(generics.CreateAPIView):
      
      def perform_create(self, serializer):
         serializer.save(UserId=self.request.user)
+
+class DeleteReport(generics.DestroyAPIView):
+    permission_classes=(permissions.IsAuthenticated,)
+    serializer_class=SubmitReportSerializer
+    queryset=BillReport.objects.all()
