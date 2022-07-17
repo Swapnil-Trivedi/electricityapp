@@ -28,7 +28,7 @@ function BillDashboard() {
 
   useEffect(()=>{
       getUserBill();
-  },[billData])
+  },[])
 
   return (
     <>

@@ -37,5 +37,5 @@ class ReportSerializer(serializers.ModelSerializer):
 
 class SubmitReportSerializer(serializers.ModelSerializer):
     class Meta:
-        fields=("ReportId","BillId")
+        fields=("BillId",)
         model=BillReport

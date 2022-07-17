@@ -2,8 +2,31 @@ import React from 'react'
 import appIcon from "../../assets/appicon.png"
 function Reportmodal(props) {
 
+    const submitReport= async ()=>{
+      const url="http://127.0.0.1:8000/api/v1/submitreport"
+      let tokken=localStorage.getItem('tokken');
+            const payload = {
+                method: 'POST',
+                headers: {
+                  Accept: 'application/json',
+                          'Content-Type': 'application/json',
+                          'Authorization': "Bearer " + tokken
+                           },
+                body: JSON.stringify({ "BillId":props.id})
+            };
+            let data=await fetch(url,payload);
+            if(data.status===201 || data.staus==="ok"){
+                alert("Repoort submitted successfully")
+            }
+            else{
+                   alert(data.status+" Please try again")  
+         
+            }
+    }
+
     const handleReport=()=>{
         console.log(`This bill is reported ${props.id}`)
+        submitReport();
     }
 
 
