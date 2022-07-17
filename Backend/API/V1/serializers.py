@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 ##importing the models
 from Bill.models import Bill
 from UserDetail.models import UserDetail
+from Report.models import BillReport
 
 class BillSerializer(serializers.ModelSerializer):
     class Meta:
@@ -28,4 +29,13 @@ class UserDetailSerializer(serializers.ModelSerializer):
             serializer = UserSerializer(user_query, many=True)
     
             return serializer.data
-       
+
+class ReportSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields=("ReportId","Remarks")
+        model=BillReport
+
+class SubmitReportSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields=("ReportId","BillId")
+        model=BillReport

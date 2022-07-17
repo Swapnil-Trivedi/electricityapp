@@ -5,10 +5,10 @@ from Bill.models import Bill
 
 class BillReport(models.Model):
     ReportId=models.IntegerField(primary_key=True)
-    Remarks=models.CharField(null=False,max_length=2000)
+    Remarks=models.CharField(null=False,max_length=2000,default="Yet to be checked by admin")
     Status=models.BooleanField(default=False,null=False)
     BillId=models.ForeignKey(Bill,on_delete=models.CASCADE)
     UserId=models.ForeignKey(User,on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.ReportId+" "+self.UserId.get_username()
+        return f"{self.ReportId} : {self.UserId.get_username()}"
