@@ -1,19 +1,86 @@
 import React from "react";
 
-function Briefbar() {
+function Briefbar(props) {
+  const comp = props.pdata.reportdata.ActiveReport;
+  const incomp = props.pdata.reportdata.InActiveReports;
+  const paid = props.pdata.billData.PaidBills;
+  const unpaid = props.pdata.billData.UnpaidBills;
   return (
     <>
       <div className="container my-4">
-        <div className="row" style={{marginTop:"75px"}}>
-          <div className="col-4 mx-2 my-3" style={{border:"solid"}}>
-            <h1>Card 1</h1>
+        <div className="row">
+          <div className="col mx-2 my-3">
+            <div
+              class={`card text-bg-danger mb-3`}
+              style={{ maxWidth: "18rem", textAlign: "center" }}
+            >
+              <div class="card-header">
+                <h5>
+                  <i class="fa-solid fa-headset mx-3"></i>Complaints
+                </h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <h5 style={{ fontSize: "55px" }}>{comp}</h5>
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="col-4 mx-2 my-3" style={{border:"solid"}}>
-            <h1>Card 2</h1>
+          <div className="col mx-2 my-3">
+            <div
+              class={`card text-bg-success mb-3`}
+              style={{ maxWidth: "18rem", textAlign: "center" }}
+            >
+              <div class="card-header">
+                <h5>
+                  <i class="fa-solid fa-list-check mx-3"></i>Reviewed Reports
+                </h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <h5 style={{ fontSize: "55px" }}>{incomp}</h5>
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="col-3 mx-2 my-3" style={{border:"solid"}}>
-            <h1>Card 3</h1>
+          <div className="col mx-2 my-3">
+            <div
+              class={`card text-bg-secondary mb-3`}
+              style={{ maxWidth: "18rem", textAlign: "center" }}
+            >
+              <div class="card-header">
+                <h5>
+                  <i class="fa-solid fa-coins mx-3"></i>Pending Bills
+                </h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <h5 style={{ fontSize: "55px" }}>{unpaid}</h5>
+                </p>
+              </div>
+            </div>
           </div>
+          <div className="col mx-2 my-3">
+            <div
+              class={`card text-bg-success mb-3`}
+              style={{ maxWidth: "18rem", textAlign: "center" }}
+            >
+              <div class="card-header">
+                <h5>
+                  <i class="fa-solid fa-sack-dollar mx-3"></i>Paid Bills
+                </h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <h5 style={{ fontSize: "55px" }}>{paid}</h5>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div>
+          <h2>My Bill Tracker</h2>
         </div>
       </div>
     </>

@@ -43,7 +43,8 @@ class ReportList(generics.ListAPIView):
     
     def get_queryset(self):
         try:
-            return BillReport.objects.all()
+            user=self.request.user.id
+            return BillReport.objects.filter(UserId_id=user)
         except Exception as e:    
             raise NotFound
 

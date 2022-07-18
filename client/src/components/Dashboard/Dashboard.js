@@ -1,15 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar';
 import Sidebar from '../Sidebar';
 import Briefbar from './Briefbar';
 
 function Dashboard() {
+  const [data,setData]=useState(0);
+  const getData=async()=>{
+    const ReportUrl="http://127.0.0.1:8000/api/v1/countactive"
+    const BillUrl="http://127.0.0.1:8000/api/v1/unpaidbill"
+    let tokken=localStorage.getItem('tokken');
+    const payload={
+      method: 'GET',
+      headers: {
+      Accept: 'application/json',
+              'Content-Type': 'application/json',
+              'Authorization': "Bearer " + tokken
+               },
+      }
+    let Rdata=await fetch(ReportUrl,payload)
+    let Bdata=await fetch(BillUrl,payload)
+    setData({reportdata:await Rdata.json(),billData:await Bdata.json()})
+    console.log(data)
+  }
+  useEffect(()=>{
+    getData();
+  },[])
+   
+
   return (
     <>
     {document.title=`E-Bill Dashboard`}
     <Navbar/>
     <Sidebar/>  
-    <Briefbar/>  
+    {data!==0?<Briefbar pdata={data}/>:""} 
     </>
   )
 }
