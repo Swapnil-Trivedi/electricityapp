@@ -1,4 +1,5 @@
 import React from "react";
+import Chart from "./Chart";
 
 function Briefbar(props) {
   const comp = props.pdata.reportdata.ActiveReport;
@@ -81,6 +82,8 @@ function Briefbar(props) {
         <hr />
         <div>
           <h2>My Bill Tracker</h2>
+          <br />
+          <Chart cdata={props.pdata.chartData}/>
         </div>
       </div>
     </>

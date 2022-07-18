@@ -8,6 +8,7 @@ function Dashboard() {
   const getData=async()=>{
     const ReportUrl="http://127.0.0.1:8000/api/v1/countactive"
     const BillUrl="http://127.0.0.1:8000/api/v1/unpaidbill"
+    const ChartUrl="http://127.0.0.1:8000/api/v1/chartdata"
     let tokken=localStorage.getItem('tokken');
     const payload={
       method: 'GET',
@@ -19,7 +20,8 @@ function Dashboard() {
       }
     let Rdata=await fetch(ReportUrl,payload)
     let Bdata=await fetch(BillUrl,payload)
-    setData({reportdata:await Rdata.json(),billData:await Bdata.json()})
+    let Cdata=await fetch(ChartUrl,payload)
+    setData({reportdata:await Rdata.json(),billData:await Bdata.json(),chartData: await Cdata.json()})
     console.log(data)
   }
   useEffect(()=>{
