@@ -6,17 +6,17 @@ The goal of this project is to provide a uniform API for both mobile and web fro
 ## Features
 ### Frontend
 The frontend is built using ReactJS and has following features:
-    - Dashboard :
-        - User can have brief about their paid,unpaid bills and active,inactive complaint reports.
-        - A visual represntation of expense chart for tracking Bills of the user.
-    - My Bills :
-        - Collection of all the bills for a user.
-        - User can view complete status of their bills and download the receipt.
-        - User can report a bill back to admin incase of any issues.
-    - My Reports :
-        - Shows the collection of complaints registered against any bill.
-        - User can view the status of the complaint and download the receipt.
-    - My Details : Shows the user account details   
+- Dashboard :
+    - User can have brief about their paid,unpaid bills and active,inactive complaint reports.
+    - A visual represntation of expense chart for tracking Bills of the user.
+- My Bills :
+    - Collection of all the bills for a user.
+    - User can view complete status of their bills and download the receipt.
+    - User can report a bill back to admin incase of any issues.
+- My Reports :
+    - Shows the collection of complaints registered against any bill.
+    - User can view the status of the complaint and download the receipt.
+- My Details : Shows the user account details   
 
 ### Backend
 The backend is built using Python Django Rest Framework with this API:
