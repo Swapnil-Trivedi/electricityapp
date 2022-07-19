@@ -78,3 +78,10 @@ To run this application on a linux box, clone the repository and execute the fol
 ## Preview
 Here is a small preview for the application.
 
+
+https://user-images.githubusercontent.com/63580574/179695643-98ead2a3-01a6-4664-aab3-be11fbeb6b5f.mp4
+
+API documentation preview
+
+
+![localhost_8000_docs_ (1)](https://user-images.githubusercontent.com/63580574/179696538-ad310b78-0488-4e43-b416-95409aff2142.png)
