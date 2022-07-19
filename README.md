@@ -75,3 +75,6 @@ To run this application on a linux box, clone the repository and execute the fol
     $ npm start
 
 ```
+## Preview
+Here is a small preview for the application.
+
