@@ -86,4 +86,3 @@ API documentation preview
 
 ![localhost_8000_docs_ (1)](https://user-images.githubusercontent.com/63580574/179696538-ad310b78-0488-4e43-b416-95409aff2142.png)
 
-## Added line for git practice here
